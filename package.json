@@ -1,0 +1,22 @@
+{
+  "name": "eurasian",
+  "version": "1.0.0",
+  "description": "Easy credit",
+  "author": "Abylay Baltabekov",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "element-ui": "^2.4.11",
+    "nuxt": "^2.9.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0"
+  }
+}

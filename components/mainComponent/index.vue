@@ -1,13 +1,22 @@
 <template>
-
+<div class="main-component">
+  <p>asdf</p>
+</div>
 </template>
 
 <script>
     export default {
-        name: "index"
+        name: "index",
+
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.main-component{
+  height: 60rem;
+  background-image: url("~assets/images/mainBG.png");
+  background-position: 66%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 </style>

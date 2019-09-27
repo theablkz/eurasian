@@ -1,0 +1,113 @@
+@import "./values.scss";
+
+:root {
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  &:focus{
+    outline: 0;
+  }
+}
+
+html {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.4rem;
+  color: $text-color;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.4rem;
+  color: $text-color;
+  height: 100%;
+}
+#__nuxt, #__layout{
+  height: 100%;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4rem; /* identical to box height, or 125% */
+  color: $text-color;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  color: $text-color;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  &.arrow {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:after {
+      content: url("/images/arrowRight.svg");
+      width: 3.2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: space-between;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+
+h3 {
+  font-size: 2.2rem;
+  line-height: 2.4rem; /* identical to box height, or 109% */
+  color: $text-color;
+  @media screen and (max-width: 768px){
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2.2rem; /* or 150% */
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p_sm {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.p_xs {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}

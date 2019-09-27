@@ -1,0 +1,10 @@
+.grid{
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 3.2rem;
+  grid-row-gap: 4rem;
+  max-width: 120rem;
+  margin: auto;
+  padding: 0 1.6rem;
+}
