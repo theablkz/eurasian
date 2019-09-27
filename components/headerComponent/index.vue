@@ -3,8 +3,8 @@
     <div class="header-grid">
       <div class="header-content">
         <div class="header-block">
-          <logo-prodengi />
-          <logo-eu-bank />
+          <logo-prodengi class="logo" />
+          <logo-eu-bank class="logo" />
         </div>
         <div class="header-block">
           <phone />
@@ -38,9 +38,16 @@ export default {
 .header {
   background-color: white;
   padding: 0.8rem 1.6rem;
+  border-bottom: .1rem solid #F2F2F2;
   .header-grid {
     max-width: 120rem;
     margin: auto;
+  }
+}
+
+.logo{
+  @media (max-width: 768px) {
+    width: 12rem;
   }
 }
 
@@ -56,7 +63,7 @@ export default {
   align-items: center;
   justify-content: center;
   @media (max-width: 768px){
-    grid-template-columns: repeat(1, auto);
+    /*grid-template-columns: repeat(1, auto);*/
   }
 }
 

@@ -47,6 +47,12 @@
       fill: white;
     }
   }
+  @media (max-width: 768px) {
+    padding: 6px;
+  }
+  @media (max-width: 359px) {
+    display: none;
+  }
 }
 
 

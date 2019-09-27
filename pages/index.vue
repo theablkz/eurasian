@@ -1,19 +1,23 @@
 <template>
   <div class="container">
-    <header-component />
-    <main-component />
+    <header-component/>
+    <main-component/>
+    <form-apply />
   </div>
 </template>
 
 <script>
-import HeaderComponent from '~/components/headerComponent'
-import MainComponent from '~/components/mainComponent'
-export default {
-  components: {
+  import HeaderComponent from '~/components/headerComponent'
+  import MainComponent from '~/components/mainComponent'
+  import FormApply from '~/components/formApply'
+
+  export default {
+    components: {
       HeaderComponent,
-    MainComponent
+      MainComponent,
+      FormApply
+    }
   }
-}
 </script>
 
 <style lang="scss">
