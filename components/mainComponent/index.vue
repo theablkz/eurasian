@@ -10,7 +10,7 @@
           Без залога и справок. По всему Казахстану
         </p>
       </div>
-      <button class="to-form">Подать заявку <arrow-down /></button>
+      <button @click="toForm" class="to-form">Подать заявку <arrow-down /></button>
     </div>
     <div class="main-blocks-container">
       <div class="main-blocks">
@@ -41,7 +41,12 @@ export default {
     money: require("~/assets/images/money.svg"),
     giveMoney: require("~/assets/images/giveMoney.svg"),
     search: require("~/assets/images/search.svg"),
-  })
+  }),
+  methods: {
+    toForm(){
+      this.$emit("toForm")
+    }
+  }
 };
 </script>
 
@@ -82,6 +87,7 @@ export default {
     }
 
     .to-form {
+      cursor: pointer;
       background: #ff006e;
       border-radius: 5.4rem;
       border: none;
@@ -178,6 +184,9 @@ export default {
         }
       }
     }
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 4rem
   }
 }
 

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <header-component/>
-    <main-component/>
-    <form-apply />
+    <main-component @toForm="scrollToForm"/>
+    <form-apply ref="form" />
   </div>
 </template>
 
@@ -16,6 +16,15 @@
       HeaderComponent,
       MainComponent,
       FormApply
+    },
+    methods: {
+      scrollToForm(){
+         window.scrollTo({
+            top: this.$refs.form.$el.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+      }
     }
   }
 </script>

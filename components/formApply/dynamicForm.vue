@@ -1,15 +1,27 @@
 <template>
     <div class="dynamic-form">
-        <first-step />
+      <loading />
+        <first-step @verifyIIN="verifyIIN"/>
     </div>
 </template>
 
 <script>
   import FirstStep from './firstStep'
+  import Loading from '~/components/loading'
     export default {
         name: "dynamicForm",
+        data: () => ({
+          iin: "",
+          loading: false
+        }),
       components: {
-          FirstStep
+          FirstStep,
+          Loading
+      },
+      methods: {
+        verifyIIN(iin){
+          this.iin = iin
+        }
       }
     }
 </script>
@@ -21,5 +33,9 @@
   border-radius: 4px;
   width: 33.6rem;
   padding: 1.6rem;
+  @media (max-width: 768px){
+    box-shadow: none;
+    padding: 1.6rem 0;
+  }
 }
 </style>
