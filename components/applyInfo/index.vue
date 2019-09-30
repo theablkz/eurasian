@@ -46,6 +46,9 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.6rem;
   margin: 2.4rem 0;
+  @media (max-width: 768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .apply-info-item {
   display: flex;
@@ -55,6 +58,10 @@ export default {
   .apply-info-item__icon {
     width: 6.4rem;
     height: 6.4rem;
+    @media (max-width: 768px){
+      width: 4rem;
+      height: 4rem;
+    }
   }
   .apply-info-item__text {
     font-weight: 500;

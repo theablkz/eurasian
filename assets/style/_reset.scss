@@ -112,6 +112,59 @@ a {
   line-height: 1.6rem;
 }
 
+select{
+  background: #FFFFFF;
+  border: .1rem solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: .4rem;
+  height: 4rem;
+  width: 100%;
+  padding: 0 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #2D3E50;
+}
+select:focus{
+  border: .1rem solid #229B26;
+  box-shadow: 0px 0px 0px #229B26, 0px 0px 3px #229B26
+}
+
+.submit-form {
+  cursor: pointer;
+  margin-top: 16px;
+  background: #ff006e;
+  border: none;
+  padding: 16px 0;
+  width: 100%;
+  border-radius: 29px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  &:hover {
+    background-color: #ff00ab;
+  }
+  &:active {
+    background-color: #ff006fb4;
+  }
+}
+
+.warning {
+  font-size: 12px;
+  line-height: 14px;
+  font-style: italic;
+  color: red;
+}
+.error {
+  border-color: red;
+  color: red;
+}
 input{
   background: #FFFFFF;
   border: .1rem solid #E0E0E0;

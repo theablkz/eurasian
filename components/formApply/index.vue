@@ -49,10 +49,11 @@ export default {
   }
   .form-apply-content {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: minmax(320px, 1fr) auto;
     grid-gap: 2.4rem;
     @media (max-width: 768px) {
-      justify-content: center;
+      grid-template-columns: 1fr;
+      justify-items: center;
     }
   }
 }

@@ -13,7 +13,7 @@
         />
         <p class="warning">{{warning}}</p>
       </label>
-      <button class="submit-iin">Получить решение</button>
+      <button class="submit-form">Получить решение</button>
     </form>
 
     <div class="flexable">
@@ -162,37 +162,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.warning {
-  font-size: 12px;
-  font-style: italic;
-  color: red;
-}
-.error {
-  border-color: red;
-  color: red;
-}
-.submit-iin {
-  cursor: pointer;
-  margin-top: 16px;
-  background: #ff006e;
-  border: none;
-  padding: 16px 0;
-  width: 100%;
-  border-radius: 29px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  color: #ffffff;
-  &:hover {
-    background-color: #ff00ab;
-  }
-  &:active {
-    background-color: #ff006fb4;
-  }
-}
+
+
+
 
 .flexable {
   display: flex;
