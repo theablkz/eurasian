@@ -198,6 +198,12 @@ export default {
         margin-bottom: 1.6rem;
       }
     }
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+
   }
 }
 

@@ -6,9 +6,9 @@ $data = json_decode($postData, true);
 
 
 $servername = "localhost";
-$username = "root";
-$password = "Dota2Dota2!";
-$dbname = "user";
+$username = "p-132_theablkz";
+$password = "xtns,kznm[jxtim&";
+$dbname = "p-132387_user";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,8 +17,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO users (name, phone)
-VALUES ('{$data['name']}','{$data['phone']}')";
+$sql = "INSERT INTO users (name, phone, iin, email, city)
+VALUES ('{$data['name']}','{$data['phone']}','{$data['iin']}','{$data['email']}','{$data['city']}')";
 
 
 if ($conn->query($sql) === TRUE) {
