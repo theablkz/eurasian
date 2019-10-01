@@ -3,6 +3,7 @@
     <header-component/>
     <main-component @toForm="scrollToForm"/>
     <form-apply ref="form" />
+    <ask />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
   import HeaderComponent from '~/components/headerComponent'
   import MainComponent from '~/components/mainComponent'
   import FormApply from '~/components/formApply'
+  import Ask from '~/components/ask'
 
   export default {
     components: {
       HeaderComponent,
       MainComponent,
-      FormApply
+      FormApply,
+      Ask
     },
     methods: {
       scrollToForm(){

@@ -161,16 +161,18 @@ export default {
   bottom: 0;
   left: 0;
   margin: auto;
+
   .second-form {
     max-width: 80rem;
     margin: auto;
-    padding: 0 16px;
+    padding: 1.6rem 1.6rem 4rem 1.6rem;
     overflow-x: hidden;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+
     .success-image {
       width: 100%;
       max-width: 45rem;

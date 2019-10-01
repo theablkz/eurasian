@@ -32,10 +32,12 @@ export default {
       this.loading = true;
       setTimeout( () => {this.loading = false; this.second = true},2000)
     },
-    sendFormToBackEnd(data){
+    async sendFormToBackEnd(data){
       data.iin = this.iin
       console.log(data)
       this.thxPage = true
+      let form = await this.$axios.post("http://localhost/api/v1/form.php", data)
+      console.log('form', form)
     }
   }
 };
