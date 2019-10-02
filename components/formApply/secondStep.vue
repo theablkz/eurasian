@@ -69,7 +69,7 @@
             </label>
           </div>
 
-          <button class="submit-form">Отправить заявку!</button>
+          <button :disabled="!personalData" class="submit-form">Отправить заявку!</button>
         </form>
       </div>
     </div>

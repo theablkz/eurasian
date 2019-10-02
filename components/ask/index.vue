@@ -88,9 +88,11 @@ export default {
   padding: 7.2rem 0 8rem 0;
   width: 100%;
   background-image: url("~assets/images/askBg.svg");
+  background-size: cover;
   .ask-container {
     max-width: 120rem;
     margin: auto;
+    padding: 0 1.6rem;
     .title {
       font-size: 30px;
       line-height: 42px;
@@ -100,7 +102,10 @@ export default {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 3.2rem;
       border-radius: .8rem;
-      margin-top: 2.4rem
+      margin-top: 2.4rem;
+      @media (max-width:768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
     .ask-item {
       background: white;

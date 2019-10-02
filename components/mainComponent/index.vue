@@ -37,7 +37,7 @@ export default {
     ArrowDown
   },
   data: () => ({
-    bg: require("~/assets/images/mainBG.png"),
+    bg: require("~/assets/images/bgmain.jpg"),
     money: require("~/assets/images/money.svg"),
     giveMoney: require("~/assets/images/giveMoney.svg"),
     search: require("~/assets/images/search.svg"),

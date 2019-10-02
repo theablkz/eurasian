@@ -153,6 +153,9 @@ select:focus{
   &:active {
     background-color: #ff006fb4;
   }
+  &:disabled{
+    background: rgba(79, 8, 54, 0.86);
+  }
 }
 
 .warning {

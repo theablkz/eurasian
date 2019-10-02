@@ -49,7 +49,8 @@ export default {
   box-shadow: 0px 2px 4px rgba(67, 96, 126, 0.04),
     0px 3px 20px rgba(67, 96, 126, 0.04);
   border-radius: 4px;
-  width: 33.6rem;
+  width: 100%;
+  max-width: 34rem;
   padding: 1.6rem;
   @media (max-width: 768px) {
     box-shadow: none;
