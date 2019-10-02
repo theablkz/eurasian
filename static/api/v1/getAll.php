@@ -6,7 +6,6 @@ $servername = "localhost";
 $username = "p-132_theablkz";
 $password = "xtns,kznm[jxtim&";
 $dbname = "p-132387_user";
-$rows = $_GET['rows'] ?: 0;
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -14,7 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql  = 'SELECT `id`, `name`, `phone`, `iin`, `email`, `city`, `date` FROM `users` ORDER BY `date` DESC LIMIT ' . $rows .', 50';
+$sql  = 'SELECT `id`, `name`, `phone`, `iin`, `email`, `city`, `date` FROM `users` ORDER BY `date` DESC';
 
 $count = 'SELECT COUNT(`id`) FROM `users`';
 $countResult = $conn->query($count);

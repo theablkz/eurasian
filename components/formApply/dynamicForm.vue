@@ -36,7 +36,7 @@ export default {
       data.iin = this.iin
       console.log(data)
       this.thxPage = true
-      let form = await this.$axios.post(`${window.location.href}api/v1/form.php`, data)
+      let form = await this.$axios.post(`${window.location.origin}/api/v1/form.php`, data)
       console.log('form', form)
     }
   }
