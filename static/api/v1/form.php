@@ -15,14 +15,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = "INSERT INTO users (name, phone, iin, email, city)
 VALUES ('{$data['name']}','{$data['phone']}','{$data['iin']}','{$data['email']}','{$data['city']}')";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully {$data[name]}";
+    echo "New record created successfully {$data['name']}";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
