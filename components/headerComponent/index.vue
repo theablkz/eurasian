@@ -3,18 +3,18 @@
     <div class="header-grid">
       <div class="header-content">
         <div class="header-block">
-          <logo-prodengi class="logo" />
+          <!--<logo-prodengi class="logo" />-->
           <logo-eu-bank class="logo" />
         </div>
-        <div class="header-block">
-          <phone />
-          <div class="phone-content">
-            <p class="tel-description">Задайте вопрос по телефону:</p>
-            <a href="tel:+7 (702) 008-17-17">
-              <p class="tel-number">+7 (702) 008-17-17</p>
-            </a>
-          </div>
-        </div>
+        <!--<div class="header-block">-->
+          <!--<phone />-->
+          <!--<div class="phone-content">-->
+            <!--<p class="tel-description">Задайте вопрос по телефону:</p>-->
+            <!--<a href="tel:+7 (702) 008-17-17">-->
+              <!--<p class="tel-number">+7 (702) 008-17-17</p>-->
+            <!--</a>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
     </div>
   </div>

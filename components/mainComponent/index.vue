@@ -37,7 +37,7 @@ export default {
     ArrowDown
   },
   data: () => ({
-    bg: require("~/assets/images/bgmain.jpg"),
+    bg: require("~/assets/images/shop.jpg"),
     money: require("~/assets/images/money.svg"),
     giveMoney: require("~/assets/images/giveMoney.svg"),
     search: require("~/assets/images/search.svg"),
@@ -128,9 +128,9 @@ export default {
 
   .main-component-background {
     width: 100%;
-    height: 74.4rem;
+    height: 50.4rem;
     object-fit: cover;
-    object-position: 66%;
+    object-position: 100%;
     @media (max-width: 768px) {
       height: 40rem;
     }
