@@ -31,7 +31,7 @@
           this.getData()
         },
         async getData(){
-          let form = await this.$axios.get(`http://theablkz.kz/api/v1/getInfo.php?rows=${this.pagination}`)
+          let form = await this.$axios.get(`${window.location.origin}/api/v1/getInfo.php?rows=${this.pagination}`)
           console.log('data', form.data.result)
           this.users = form.data.result
         },
