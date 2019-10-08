@@ -31,6 +31,7 @@
           this.getData()
         },
         async getData(){
+          console.log(window.location.origin)
           let form = await this.$axios.get(`${window.location.origin}/api/v1/getInfo.php?rows=${this.pagination}`)
           console.log('data', form.data.result)
           this.users = form.data.result
