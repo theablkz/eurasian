@@ -159,10 +159,11 @@ select:focus{
 }
 
 .warning {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 14px;
   font-style: italic;
   color: red;
+  margin-top: .2rem;
 }
 .error {
   border-color: red;

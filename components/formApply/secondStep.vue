@@ -7,9 +7,8 @@
           Отлично!
         </h1>
         <h2 class="success-description">
-          Вам может быть одобрен кредит на сумму до
-          <span>1 000 000</span> тенге. Пожалуйста, оставьте ваши данные -
-          менеджер свяжется с вами для уточнения деталей и расчета платежей
+          Вам может быть одобрен кредит на сумму до <span>3 000 000</span> тенге! <br>
+          Пожалуйста, оставьте ваши контакты - менеджер свяжется с вами для расчета переплаты и графика платежей
         </h2>
       </div>
       <div class="success-form">
@@ -163,7 +162,7 @@ export default {
   margin: auto;
 
   .second-form {
-    max-width: 80rem;
+    max-width: 100rem;
     margin: auto;
     padding: 1.6rem 1.6rem 4rem 1.6rem;
     overflow-x: hidden;

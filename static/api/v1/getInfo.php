@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql  = 'SELECT `id`, `name`, `phone`, `iin`, `email`, `city`, `date` FROM `users` ORDER BY `date` DESC LIMIT ' . $rows .', 50';
+$sql  = 'SELECT `id`, `name`, `summ`, `phone`, `iin`, `email`, `city`, `date` FROM `users` ORDER BY `date` DESC LIMIT ' . $rows .', 50';
 
 $count = 'SELECT COUNT(`id`) FROM `users`';
 $countResult = $conn->query($count);

@@ -89,6 +89,7 @@ export default {
   width: 100%;
   background-image: url("~assets/images/askBg.svg");
   background-size: cover;
+  border-radius: 4px;
   .ask-container {
     max-width: 120rem;
     margin: auto;

@@ -14,8 +14,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO users (name, phone, iin, email, city)
-VALUES ('{$data['name']}','{$data['phone']}','{$data['iin']}','{$data['email']}','{$data['city']}')";
+$sql = "INSERT INTO users (name, summ, phone, iin, email, city)
+VALUES ('{$data['name']}', '{$data['summ']}', '{$data['phone']}','{$data['iin']}','{$data['email']}','{$data['city']}')";
 
 
 if ($conn->query($sql) === TRUE) {
@@ -33,6 +33,7 @@ if ($conn->query($sql) === TRUE) {
         <tr>
 
         <td>name</td>
+        <td>summ</td>
         <td>city</td>
         <td>iin</td>
         <td>email</td>
@@ -42,6 +43,7 @@ if ($conn->query($sql) === TRUE) {
         <tr>
 
         <td>{$data['name']}</td>
+        <td>{$data['summ']}</td>
         <td>{$data['city']}</td>
         <td>{$data['iin'] }</td>
         <td>{$data['email']}</td>

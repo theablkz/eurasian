@@ -1,18 +1,35 @@
 <template>
   <div>
     <form @submit.prevent="submit">
-      <label for="iin">
-        <p :class="{error: error}">Ваш ИИН</p>
-        <input
-          type="tel"
-          id="iin"
-          pattern="\d*"
-          v-mask="'############'"
-          v-model="iin"
-          :class="{error: error}"
-        />
-        <p class="warning">{{warning}}</p>
-      </label>
+      <div class="input-container">
+        <label for="iin">
+          <p :class="{error: error}">Ваш ИИН</p>
+          <input
+            type="tel"
+            id="iin"
+            pattern="\d*"
+            v-mask="'############'"
+            v-model="iin"
+            :class="{error: error}"
+          />
+          <p class="warning">{{warning}}</p>
+        </label>
+      </div>
+      <div class="input-container">
+        <label for="summ">
+          <p :class="{error: currentError}">Сумма</p>
+          <the-mask
+            mask="FFFFFFFFFFFFF"
+            :tokens="hexTokens"
+            id="summ"
+            inputmode="numeric"
+            v-model="current"
+            :class="{error: currentError}"
+
+          />
+          <p class="warning">{{currentWarning}}</p>
+        </label>
+      </div>
       <button class="submit-form">Получить решение</button>
     </form>
 
@@ -73,26 +90,52 @@
 </template>
 
 <script>
+  import {TheMask} from 'vue-the-mask'
 export default {
   name: "firstStep",
+  components: {TheMask},
   data: () => ({
+    hexTokens: {
+      F: {
+        pattern: /[0-9]|| ' ' */,
+        transform: v => v.toLocaleUpperCase()
+      }
+    },
     iin: "",
     warning: "укажите точный - это влияет на скоринг",
-    error: false
+    error: false,
+    current: "",
+    currentWarning: "укажите сумму которую хотите получить",
+    currentError: false
   }),
   watch: {
     iin: function() {
       this.error = false;
-      this.warning = "укажите точный - это влияет на скоринг";
+      this.warning = "Точность ИИНа влияет на решение";
+    },
+    current: function () {
+      this.currentError = false;
+      this.currentWarning = "Укажите сумму которую хотите получить"
     }
+
   },
   methods: {
+    numberFormat(){
+      this.current = this.current.toString().replace(/\s/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    },
     submit() {
       if (!this.is_valid_inn(this.iin)) {
         this.warning = "иин который вы указали не существует";
         this.error = true;
-      }else{
-        this.$emit("verifyIIN", this.iin)
+      }
+      if(this.current.length == 0){
+        this.currentWarning = "поле не должно быть пустым"
+        this.currentError = true
+      }
+
+
+      if(!this.error && !this.currentError){
+        this.$emit("verifyIIN", {iin: this.iin, current: this.current})
       }
     },
     is_valid_inn(i) {
@@ -163,7 +206,9 @@ export default {
 
 <style lang="scss" scoped>
 
-
+.input-container{
+  margin-bottom: 1.6rem;
+}
 
 
 .flexable {

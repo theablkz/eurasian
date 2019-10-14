@@ -16,6 +16,7 @@ export default {
   name: "dynamicForm",
   data: () => ({
     iin: "",
+    current: "",
     loading: false,
     second: false,
     thxPage: false
@@ -27,13 +28,15 @@ export default {
     ThxPage
   },
   methods: {
-    verifyIIN(iin) {
-      this.iin = iin;
+    verifyIIN(data) {
+      this.iin = data.iin;
+      this.current = data.current
       this.loading = true;
       setTimeout( () => {this.loading = false; this.second = true},2000)
     },
     async sendFormToBackEnd(data){
       data.iin = this.iin
+      data.summ = this.current
       console.log(data)
       this.thxPage = true
       let form = await this.$axios.post(`${window.location.origin}/api/v1/form.php`, data)

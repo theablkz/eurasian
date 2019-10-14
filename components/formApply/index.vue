@@ -1,6 +1,6 @@
 <template>
   <div class="form-apply">
-    <h3 class="title">Укажите ваш ИИН и получите моментальное решение</h3>
+    <h3 class="title">Укажите сумму и ваш ИИН и получите решение сразу</h3>
     <div class="form-apply-content">
       <dynamic-form />
       <apply-info />

@@ -9,6 +9,7 @@
     <div class="content-column">
       <p>id</p>
       <p>name</p>
+      <p>summ</p>
       <p>email</p>
       <p>phone</p>
       <p>iin</p>
@@ -18,6 +19,7 @@
     <div v-for="(item, index) in items" :key="index" class="content-column">
       <p>{{item.id}}</p>
       <p>{{item.name}}</p>
+      <p>{{item.summ}}</p>
       <p>{{item.email}}</p>
       <p>{{item.phone}}</p>
       <p>{{item.iin}}</p>
@@ -55,7 +57,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+  p{
+    font-size: 1.4rem;
+  }
   .admin-container{
     width: 120rem;
     margin: auto;
@@ -67,7 +71,7 @@
 
     .content-column{
       display: grid;
-      grid-template-columns: 1fr 2fr 3fr 2fr 2fr 1.5fr 2fr;
+      grid-template-columns: 1fr 2fr 2fr 3fr 2fr 2fr 1.5fr 2fr;
       grid-gap: 1.6rem;
       align-items: center;
       padding: .8rem 0;
