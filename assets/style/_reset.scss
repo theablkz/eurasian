@@ -183,6 +183,9 @@ input{
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: #2D3E50;
+  &::placeholder{
+    color: #cecece;
+  }
 }
 input:focus{
   border: .1rem solid #229B26;

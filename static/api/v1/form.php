@@ -33,11 +33,12 @@ if ($conn->query($sql) === TRUE) {
         <tr>
 
         <td>name</td>
-        <td>summ</td>
+        <td>amount</td>
         <td>city</td>
         <td>iin</td>
         <td>email</td>
         <td>phone</td>
+        <td>scoring</td>
 
         </tr>
         <tr>
@@ -48,6 +49,7 @@ if ($conn->query($sql) === TRUE) {
         <td>{$data['iin'] }</td>
         <td>{$data['email']}</td>
         <td>{$data['phone']}</td>
+        <td>{$data['score']}</td>
 
         </tr>
         </tbody>

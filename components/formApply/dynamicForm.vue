@@ -39,6 +39,14 @@ export default {
       data.summ = this.current
       console.log(data)
       this.thxPage = true
+      let score = await this.$axios({
+        method: "post",
+        url: "https://score-admin.prodengi.kz/api/v1/public/online",
+        data: {iin: data.iin},
+        config: { headers: { "Content-Type": "multipart/form-data" } }
+      });
+      console.log('score', score.data.success)
+      data.score = score.data.success ? 'yes' : 'no'
       let form = await this.$axios.post(`${window.location.origin}/api/v1/form.php`, data)
       console.log('form', form)
     }
